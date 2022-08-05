@@ -25,5 +25,37 @@ namespace WinFormsTEST
             Contain_Text.Text = "-";
             Substring_Text.Text = "-";
         }
+
+        private void chkTest1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("CheckedChange:" + chkTest1.Checked + ":" + chkTest1.CheckState);
+        }
+
+        private void chkTest1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click:" + chkTest1.Checked + ":" + chkTest1.CheckState);
+            chkTest1.Checked = !chkTest1.Checked;
+        }
+
+        private void chkListTest1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            MessageBox.Show("ItemCheck : " + chkListTest1.CheckedIndices.Count + " : " + chkListTest1.CheckedItems);
+        }
+
+        private void chkListTest1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("SelectedIndexChanged : " + chkListTest1.CheckedIndices + " : " + chkListTest1.CheckedItems);
+        }
+
+        private void cmbTest1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("cmbTest1 Click : " + cmbTest1.SelectedItem);
+        }
+
+        private void Calc_Click(object sender, EventArgs e)
+        {
+            Calc calc = new Calc();
+            calc.Show();
+        }
     }
 } 

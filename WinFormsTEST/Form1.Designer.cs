@@ -34,28 +34,18 @@
             this.Contain_Text = new System.Windows.Forms.Label();
             this.Substring = new System.Windows.Forms.Label();
             this.Substring_Text = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
             this.btnExcute = new System.Windows.Forms.Button();
-            this.Replace = new System.Windows.Forms.Label();
-            this.Replace_Text = new System.Windows.Forms.Label();
-            this.Length_Text = new System.Windows.Forms.Label();
-            this.Length = new System.Windows.Forms.Label();
-            this.ToLower = new System.Windows.Forms.Label();
-            this.ToLower_Text = new System.Windows.Forms.Label();
-            this.Equals_Text = new System.Windows.Forms.Label();
-            this.Equal = new System.Windows.Forms.Label();
-            this.Trim = new System.Windows.Forms.Label();
-            this.Trim_Text = new System.Windows.Forms.Label();
-            this.ToUpper_Text = new System.Windows.Forms.Label();
-            this.ToUpper = new System.Windows.Forms.Label();
-            this.Split = new System.Windows.Forms.Label();
-            this.Split_Text = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.chkTest1 = new System.Windows.Forms.CheckBox();
+            this.chkListTest1 = new System.Windows.Forms.CheckedListBox();
+            this.cmbTest1 = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Calc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(301, 345);
+            this.textBox1.Location = new System.Drawing.Point(49, 203);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(298, 23);
             this.textBox1.TabIndex = 0;
@@ -95,7 +85,7 @@
             this.Substring.Name = "Substring";
             this.Substring.Size = new System.Drawing.Size(58, 30);
             this.Substring.TabIndex = 5;
-            this.Substring.Text = "Substring\r\n(3.5)";
+            this.Substring.Text = "Substring\r\n(3,5)";
             // 
             // Substring_Text
             // 
@@ -106,15 +96,15 @@
             this.Substring_Text.TabIndex = 4;
             this.Substring_Text.Text = "-";
             // 
-            // label5
+            // Title
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(182, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(294, 32);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "(label)WinForm_StringTest";
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.Location = new System.Drawing.Point(182, 9);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(164, 32);
+            this.Title.TabIndex = 6;
+            this.Title.Text = "WinForm Test";
             // 
             // btnExcute
             // 
@@ -126,163 +116,77 @@
             this.btnExcute.UseVisualStyleBackColor = true;
             this.btnExcute.Click += new System.EventHandler(this.btnExcute_Click);
             // 
-            // Replace
+            // chkTest1
             // 
-            this.Replace.AutoSize = true;
-            this.Replace.Location = new System.Drawing.Point(49, 240);
-            this.Replace.Name = "Replace";
-            this.Replace.Size = new System.Drawing.Size(48, 15);
-            this.Replace.TabIndex = 11;
-            this.Replace.Text = "Replace";
+            this.chkTest1.AutoSize = true;
+            this.chkTest1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chkTest1.Location = new System.Drawing.Point(410, 253);
+            this.chkTest1.Name = "chkTest1";
+            this.chkTest1.Size = new System.Drawing.Size(85, 19);
+            this.chkTest1.TabIndex = 8;
+            this.chkTest1.Text = "체크선택 1";
+            this.chkTest1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkTest1.UseVisualStyleBackColor = false;
+            this.chkTest1.CheckedChanged += new System.EventHandler(this.chkTest1_CheckedChanged);
+            this.chkTest1.Click += new System.EventHandler(this.chkTest1_Click);
             // 
-            // Replace_Text
+            // chkListTest1
             // 
-            this.Replace_Text.AutoSize = true;
-            this.Replace_Text.Location = new System.Drawing.Point(118, 240);
-            this.Replace_Text.Name = "Replace_Text";
-            this.Replace_Text.Size = new System.Drawing.Size(12, 15);
-            this.Replace_Text.TabIndex = 10;
-            this.Replace_Text.Text = "-";
+            this.chkListTest1.FormattingEnabled = true;
+            this.chkListTest1.Items.AddRange(new object[] {
+            "테스트1",
+            "테스트2",
+            "테스트3"});
+            this.chkListTest1.Location = new System.Drawing.Point(588, 253);
+            this.chkListTest1.Name = "chkListTest1";
+            this.chkListTest1.Size = new System.Drawing.Size(69, 94);
+            this.chkListTest1.TabIndex = 9;
+            this.chkListTest1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.chkListTest1_ItemCheck);
+            this.chkListTest1.SelectedIndexChanged += new System.EventHandler(this.chkListTest1_SelectedIndexChanged);
             // 
-            // Length_Text
+            // cmbTest1
             // 
-            this.Length_Text.AutoSize = true;
-            this.Length_Text.Location = new System.Drawing.Point(118, 198);
-            this.Length_Text.Name = "Length_Text";
-            this.Length_Text.Size = new System.Drawing.Size(12, 15);
-            this.Length_Text.TabIndex = 9;
-            this.Length_Text.Text = "-";
+            this.cmbTest1.FormattingEnabled = true;
+            this.cmbTest1.Items.AddRange(new object[] {
+            "항목1",
+            "항목2",
+            "항목3"});
+            this.cmbTest1.Location = new System.Drawing.Point(259, 316);
+            this.cmbTest1.Name = "cmbTest1";
+            this.cmbTest1.Size = new System.Drawing.Size(121, 23);
+            this.cmbTest1.TabIndex = 10;
+            this.cmbTest1.SelectedIndexChanged += new System.EventHandler(this.cmbTest1_SelectedIndexChanged);
             // 
-            // Length
+            // flowLayoutPanel1
             // 
-            this.Length.AutoSize = true;
-            this.Length.Location = new System.Drawing.Point(49, 198);
-            this.Length.Name = "Length";
-            this.Length.Size = new System.Drawing.Size(44, 15);
-            this.Length.TabIndex = 8;
-            this.Length.Text = "Length";
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(249, 384);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 11;
             // 
-            // ToLower
+            // Calc
             // 
-            this.ToLower.AutoSize = true;
-            this.ToLower.Location = new System.Drawing.Point(175, 148);
-            this.ToLower.Name = "ToLower";
-            this.ToLower.Size = new System.Drawing.Size(52, 15);
-            this.ToLower.TabIndex = 15;
-            this.ToLower.Text = "ToLower";
-            // 
-            // ToLower_Text
-            // 
-            this.ToLower_Text.AutoSize = true;
-            this.ToLower_Text.Location = new System.Drawing.Point(244, 148);
-            this.ToLower_Text.Name = "ToLower_Text";
-            this.ToLower_Text.Size = new System.Drawing.Size(12, 15);
-            this.ToLower_Text.TabIndex = 14;
-            this.ToLower_Text.Text = "-";
-            // 
-            // Equals_Text
-            // 
-            this.Equals_Text.AutoSize = true;
-            this.Equals_Text.Location = new System.Drawing.Point(118, 148);
-            this.Equals_Text.Name = "Equals_Text";
-            this.Equals_Text.Size = new System.Drawing.Size(12, 15);
-            this.Equals_Text.TabIndex = 13;
-            this.Equals_Text.Text = "-";
-            // 
-            // Equal
-            // 
-            this.Equal.AutoSize = true;
-            this.Equal.Location = new System.Drawing.Point(49, 148);
-            this.Equal.Name = "Equal";
-            this.Equal.Size = new System.Drawing.Size(41, 15);
-            this.Equal.TabIndex = 12;
-            this.Equal.Text = "Equals";
-            // 
-            // Trim
-            // 
-            this.Trim.AutoSize = true;
-            this.Trim.Location = new System.Drawing.Point(175, 240);
-            this.Trim.Name = "Trim";
-            this.Trim.Size = new System.Drawing.Size(31, 15);
-            this.Trim.TabIndex = 19;
-            this.Trim.Text = "Trim";
-            // 
-            // Trim_Text
-            // 
-            this.Trim_Text.AutoSize = true;
-            this.Trim_Text.Location = new System.Drawing.Point(244, 240);
-            this.Trim_Text.Name = "Trim_Text";
-            this.Trim_Text.Size = new System.Drawing.Size(12, 15);
-            this.Trim_Text.TabIndex = 18;
-            this.Trim_Text.Text = "-";
-            // 
-            // ToUpper_Text
-            // 
-            this.ToUpper_Text.AutoSize = true;
-            this.ToUpper_Text.Location = new System.Drawing.Point(244, 198);
-            this.ToUpper_Text.Name = "ToUpper_Text";
-            this.ToUpper_Text.Size = new System.Drawing.Size(12, 15);
-            this.ToUpper_Text.TabIndex = 17;
-            this.ToUpper_Text.Text = "-";
-            // 
-            // ToUpper
-            // 
-            this.ToUpper.AutoSize = true;
-            this.ToUpper.Location = new System.Drawing.Point(175, 198);
-            this.ToUpper.Name = "ToUpper";
-            this.ToUpper.Size = new System.Drawing.Size(52, 15);
-            this.ToUpper.TabIndex = 16;
-            this.ToUpper.Text = "ToUpper";
-            // 
-            // Split
-            // 
-            this.Split.AutoSize = true;
-            this.Split.Location = new System.Drawing.Point(49, 282);
-            this.Split.Name = "Split";
-            this.Split.Size = new System.Drawing.Size(31, 15);
-            this.Split.TabIndex = 21;
-            this.Split.Text = "Split";
-            // 
-            // Split_Text
-            // 
-            this.Split_Text.AutoSize = true;
-            this.Split_Text.Location = new System.Drawing.Point(118, 282);
-            this.Split_Text.Name = "Split_Text";
-            this.Split_Text.Size = new System.Drawing.Size(12, 15);
-            this.Split_Text.TabIndex = 20;
-            this.Split_Text.Text = "-";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 311);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(12, 15);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "-";
+            this.Calc.Location = new System.Drawing.Point(83, 351);
+            this.Calc.Name = "Calc";
+            this.Calc.Size = new System.Drawing.Size(75, 23);
+            this.Calc.TabIndex = 12;
+            this.Calc.Text = "계산기";
+            this.Calc.UseVisualStyleBackColor = true;
+            this.Calc.Click += new System.EventHandler(this.Calc_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Split);
-            this.Controls.Add(this.Split_Text);
-            this.Controls.Add(this.Trim);
-            this.Controls.Add(this.Trim_Text);
-            this.Controls.Add(this.ToUpper_Text);
-            this.Controls.Add(this.ToUpper);
-            this.Controls.Add(this.ToLower);
-            this.Controls.Add(this.ToLower_Text);
-            this.Controls.Add(this.Equals_Text);
-            this.Controls.Add(this.Equal);
-            this.Controls.Add(this.Replace);
-            this.Controls.Add(this.Replace_Text);
-            this.Controls.Add(this.Length_Text);
-            this.Controls.Add(this.Length);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.Calc);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.cmbTest1);
+            this.Controls.Add(this.chkListTest1);
+            this.Controls.Add(this.chkTest1);
             this.Controls.Add(this.btnExcute);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.Substring);
             this.Controls.Add(this.Substring_Text);
             this.Controls.Add(this.Contain_Text);
@@ -304,22 +208,12 @@
         private Label Contain_Text;
         private Label Substring;
         private Label Substring_Text;
-        private Label label5;
+        private Label Title;
         private Button btnExcute;
-        private Label Replace;
-        private Label Replace_Text;
-        private Label Length_Text;
-        private Label Length;
-        private Label ToLower;
-        private Label ToLower_Text;
-        private Label Equals_Text;
-        private Label Equal;
-        private Label Trim;
-        private Label Trim_Text;
-        private Label ToUpper_Text;
-        private Label ToUpper;
-        private Label Split;
-        private Label Split_Text;
-        private Label label1;
+        private CheckBox chkTest1;
+        private CheckedListBox chkListTest1;
+        private ComboBox cmbTest1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Button Calc;
     }
 }
