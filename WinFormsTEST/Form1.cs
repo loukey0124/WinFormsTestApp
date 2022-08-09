@@ -57,5 +57,19 @@ namespace WinFormsTEST
             Calc calc = new Calc();
             calc.Show();
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBoxButtons mbb = MessageBoxButtons.OK;
+            MessageBoxIcon mbi = MessageBoxIcon.Asterisk;
+
+            if (e.KeyValue != 0 && e.Control)
+                MessageBox.Show(e.KeyCode.ToString(), "Keydown!", mbb, mbi);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //MessageBox.Show("KeyPress");
+        }
     }
 } 

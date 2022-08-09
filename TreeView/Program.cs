@@ -1,4 +1,4 @@
-namespace WinFormsTEST
+namespace TreeView
 {
     internal static class Program
     {
@@ -12,7 +12,6 @@ namespace WinFormsTEST
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-            //Application.EnableVisualStyles();
         }
     }
 }
