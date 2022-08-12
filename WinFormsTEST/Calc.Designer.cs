@@ -54,6 +54,7 @@
             this.dud_test1 = new System.Windows.Forms.DomainUpDown();
             this.nud_test1 = new System.Windows.Forms.NumericUpDown();
             this.dtpcik = new System.Windows.Forms.DateTimePicker();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud_test1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -277,11 +278,19 @@
             this.dtpcik.Size = new System.Drawing.Size(200, 23);
             this.dtpcik.TabIndex = 23;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(377, 162);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(200, 23);
+            this.maskedTextBox1.TabIndex = 24;
+            // 
             // Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 502);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.dtpcik);
             this.Controls.Add(this.nud_test1);
             this.Controls.Add(this.dud_test1);
@@ -342,5 +351,6 @@
         private DomainUpDown dud_test1;
         private NumericUpDown nud_test1;
         private DateTimePicker dtpcik;
+        private MaskedTextBox maskedTextBox1;
     }
 }
